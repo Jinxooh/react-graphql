@@ -12,8 +12,17 @@ export const HOME_PAGE = gql`
 `;
 
 export const DETAIL_PAGE = gql`
-  query {
-    getMovies(limit: 50, rating: 3) {
+  query getMovieDetails($movieId: Int!) {
+    getMovie(id: $movieId) {
+      id
+      title
+      rating
+      language
+      description_full
+      large_cover_image
+      genres
+    }
+    getSuggestions(id: $movieId) {
       id
       title
       rating

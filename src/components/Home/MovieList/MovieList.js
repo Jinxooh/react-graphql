@@ -1,16 +1,6 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled from 'styled-components';
 import MovieItem from '../MovieItem';
-
-injectGlobal`
-  body {
-    padding: 0;
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-`;
 
 const MovieList = ({
   data
