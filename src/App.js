@@ -10,7 +10,7 @@ class App extends Component {
         <Router>
           <React.Fragment>
             <Route exact={true} path={"/"} component={Home}></Route>
-            <Route exact={true} path={"/Detail"} component={Detail}></Route>
+            <Route path={"/details/:movieId"} component={Detail}></Route>
           </React.Fragment>
         </Router>
       </ApolloProvider>

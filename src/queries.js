@@ -6,7 +6,18 @@ export const HOME_PAGE = gql`
       id
       title
       rating
-      genres
+      medium_cover_image
+    }
+  }
+`;
+
+export const DETAIL_PAGE = gql`
+  query {
+    getMovies(limit: 50, rating: 3) {
+      id
+      title
+      rating
+      medium_cover_image
     }
   }
 `;
