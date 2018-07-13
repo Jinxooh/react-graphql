@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-
+import { ApolloProvider } from 'react-apollo';
+import client from './client';
 class App extends Component {
   render() {
-    return (
-      <div className="App" />
+    return (<ApolloProvider client={client}>
+        <div className="App" />
+      </ApolloProvider>
     );
   }
 }
