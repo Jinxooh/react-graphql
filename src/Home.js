@@ -2,6 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { Helmet } from "react-helmet";
 import { HOME_PAGE } from './queries';
+import Loading from 'lib/Loading';
 import MovieList from './components/Home/MovieList';
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       </Helmet>
       <Query query={HOME_PAGE}>
         {({ loading, data, error }) => {
-          if (loading) return <span>loading</span>
+          if (loading) return <span><Loading /></span>
           if (error) return <span>error</span>
           if (data) {
             return <MovieList data={data}></MovieList>

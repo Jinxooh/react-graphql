@@ -3,6 +3,7 @@ import { Query } from 'react-apollo';
 import { DETAIL_PAGE } from './queries';
 import { Helmet } from "react-helmet";
 
+import Loading from 'lib/Loading';
 import MovieDetail from './components/Detail/MovieDetail';
 
 const Detail = ({
@@ -17,7 +18,7 @@ const Detail = ({
             <Helmet>
               <title>Loading</title>
             </Helmet>
-            loading
+            <Loading />
           </React.Fragment>
         )
 
