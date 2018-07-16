@@ -53,15 +53,24 @@ const Container = styled.div`
 
 const Explan = styled.div`
   width: 100%;
-  height: 100%;
+  overflow: scroll;
   margin: 20px;
   display: flex;
   flex-flow: column;
+  ${media.tablet`
+    overflow: initial;
+  `}
+  justify-content: space-around;
+  max-height: 600px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Suggestion = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const ImageBackground = styled.div`
