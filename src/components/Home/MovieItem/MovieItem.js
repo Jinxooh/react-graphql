@@ -1,22 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ratingView } from 'lib/common';
+
 const MovieItem = ({
   id, title, rating, image, onClick
 }) => {
-
-  const ratingView = () => {
-    const star = Math.ceil(rating/2);
-    const emoji = star > 3 ? `😍` : star === 3 ? `🙂` : `🤢`;
-    return emoji.repeat(star);
-  }
-
   return (
     <Link to={`/details/${id}`}>
       <Container>
         <Background image={image} />
         <Title>{title}</Title>
-        <Column>Rating: {ratingView()}</Column>
+        <Column>Rating: {ratingView(rating)}</Column>
       </Container>
     </Link>
   );
