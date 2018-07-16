@@ -4,26 +4,15 @@ import { ApolloProvider } from 'react-apollo';
 import client from './client';
 import Home from './Home';
 import Detail from './Detail';
-import { injectGlobal } from 'styled-components';
-
-injectGlobal`
-  body {
-    padding: 0;
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-`;
 
 class App extends Component {
   render() {
     return (<ApolloProvider client={client}>
         <Router>
-          <React.Fragment>
+          <main>
             <Route exact={true} path={"/"} component={Home}></Route>
             <Route path={"/details/:movieId"} component={Detail}></Route>
-          </React.Fragment>
+          </main>
         </Router>
       </ApolloProvider>
     );

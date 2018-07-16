@@ -23,7 +23,14 @@ const Detail = ({
 
         if (error) return <span>Error occurs</span>
         if (data) {
-          return <MovieDetail data={data} />
+          return (
+            <React.Fragment>
+              <Helmet>
+                <title>Detail</title>
+              </Helmet>
+              <MovieDetail data={data} />
+            </React.Fragment>
+          );
           // return <span>{JSON.stringify(data)}</span>
         }
         return <span>No data</span>

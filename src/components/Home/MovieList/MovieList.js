@@ -27,7 +27,6 @@ const Container = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: #495057;
 `;
 
 export default MovieList;
