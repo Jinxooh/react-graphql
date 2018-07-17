@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import client from './client';
 import Home from './Home';
 import Detail from './Detail';
+import Error from './Error';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <main>
             <Route exact={true} path={"/"} component={Home}></Route>
             <Route path={"/details/:movieId"} component={Detail}></Route>
+            <Route path={"/error"} component={Error}></Route>
           </main>
         </Router>
       </ApolloProvider>
